@@ -1,0 +1,17 @@
+# Data files are large and are not tracked (see README for how to obtain / rebuild them)
+Data/Raw/
+Data/Clean/
+
+# Python / Jupyter
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+~$*
