@@ -14,6 +14,10 @@ Spikes are 2.1% of test station-hours, so PR-AUC is the primary metric (random =
 
 ## Dataset
 
+**Source:** [Shanghai Telecom Dataset](http://sguangwang.com/TelecomDataset.html), provided by Shanghai Telecom and published by Prof. Shangguang Wang. It contains over 7.2 million records of 9,481 mobile phones accessing the Internet through 3,233 base stations over six months (June – November 2014). The dataset page lists the papers to cite when using the data. A mirror is also available on [Kaggle](https://www.kaggle.com/datasets/mexwell/telecom-shanghai-dataset).
+
+The raw files are not included in this repository; download them from the source above and place them in `Data/Raw/`.
+
 Each record is one user session at a base station.
 
 | Column | Description |
@@ -59,7 +63,7 @@ District boundaries (`Data/Reference/shanghai_districts.geojson`) are the 16 cur
    ```bash
    pip install -r requirements.txt
    ```
-2. Place the 12 raw Excel files in `Data/Raw/`.
+2. Download the 12 raw Excel files from the [Shanghai Telecom Dataset](http://sguangwang.com/TelecomDataset.html) page and place them in `Data/Raw/`.
 3. Open `main.ipynb` and run all cells (**Restart → Run All**). A full run takes about 30 minutes. The notebook writes `Data/Clean/sessions_clean.parquet`.
 
 Hyperparameter tuning is switched off by default (`RUN_TUNING = False`, tuned values are in the configuration cell). Set it to `True` to repeat the Optuna search (requires `optuna`, about 12 minutes extra).
